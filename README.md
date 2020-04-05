@@ -4,9 +4,9 @@ This application was created using React, React Hooks API, Redux and SASS prepoc
 
 Simple affordability calculator. 
 The application have a single input text box that will take in an alpha value from 1 to 10 characters long.
-There will be a button which will be disabled for invalid input values 
-On valid input values form when clicked form will be submitted
-After submission 3 API request will be mocked in fake-backend.js file
+There will be a button which will be disabled for invalid input values. 
+On valid input values form when clicked form will be submitted.
+After submission 3 API request will be mocked in fake-backend.js file.
 Finally response from mocked api request  will be shown in data table
 
 
