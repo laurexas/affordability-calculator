@@ -1,0 +1,9 @@
+@import "../../../styles/utils/vars";
+
+.heading {
+  font-weight: 400;
+  font-size: 32px;
+  text-align: inherit;
+  color: $main5;
+  text-transform: capitalize;
+}

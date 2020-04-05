@@ -1,0 +1,35 @@
+@import "../../../styles/utils/vars";
+.sm {
+  width: 14px;
+  height: 14px;
+}
+
+.md {
+  width: 18px;
+  height: 18px;
+}
+
+.lg {
+  width: 24px;
+  height: 24px;
+}
+.primary {
+  fill: $primary2;
+  stroke: $primary2;
+}
+.secondary {
+  fill: $secondary2;
+  stroke: $secondary2;
+}
+.dark {
+  fill: $black;
+  stroke: $black;
+}
+.light {
+  fill: $white;
+  stroke: $white;
+}
+.grey {
+  fill: $grey4;
+  stroke: $grey4;
+}

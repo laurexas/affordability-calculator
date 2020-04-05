@@ -1,0 +1,396 @@
+@import "../../../styles/utils/vars";
+
+.text_input {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  .list {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    background: $primary2;
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px 0px;
+    z-index: 2;
+    box-sizing: border-box;
+    border: 1px solid $primary3;
+    max-height: 300px;
+    overflow-y: auto;
+    .option {
+      color: #fff;
+      background: $primary2;
+      font-size: 14px;
+      width: 100%;
+      white-space: nowrap;
+      height: 30px;
+      padding-left: 3px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      &:hover {
+        background: lighten($primary2, 10%);
+      }
+    }
+  }
+
+  .icon {
+    position: absolute;
+    right: 9px;
+    bottom: 7px;
+    cursor: pointer;
+  }
+
+  &.sm {
+    input {
+      font-size: 14px;
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+    .list {
+      top: 34px;
+    }
+  }
+
+  &.md {
+    input {
+      font-size: 16px;
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+    .list {
+      top: 38px;
+    }
+  }
+
+  &.lg {
+    input {
+      font-size: 18px;
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+    .list {
+      top: 48px;
+    }
+  }
+
+  label {
+    display: block;
+    line-height: 12px;
+    font-weight: 400;
+    font-size: 12px;
+    height: 12px;
+    color: $grey3;
+    transition: 0.2s;
+    span {
+      color: $error;
+    }
+    &.error {
+      color: $error;
+    }
+  }
+
+  fieldset {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  input {
+    display: block;
+    font-weight: 500;
+    outline: none;
+    line-height: 1;
+    width: 100%;
+    color: $black;
+    border: none;
+    background: transparent;
+    vertical-align: bottom;
+    box-sizing: border-box;
+
+    &::placeholder {
+      font-weight: 300;
+    }
+  }
+
+  &.primary input:focus + fieldset label {
+    color: $primary2;
+  }
+
+  &.secondary input:focus + fieldset label {
+    color: $secondary3;
+  }
+
+  &.standard {
+    input {
+      line-height: 1;
+      height: calc(100% - 12px);
+    }
+
+    &.sm {
+      height: 32px;
+    }
+
+    &.md {
+      height: 38px;
+    }
+
+    &.lg {
+      height: 46px;
+    }
+
+    &.primary:hover input {
+      border-color: $main2;
+    }
+
+    &.secondary:hover {
+      border-color: $secondary2;
+    }
+
+    fieldset {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-bottom: 1px solid $grey3;
+      }
+    }
+
+    &.primary {
+      fieldset.active:after {
+        border-bottom: 2px solid $main2;
+      }
+
+      label.active {
+        color: $primary2;
+      }
+    }
+
+    &.secondary {
+      fieldset.active:after {
+        border-bottom: 2px solid $secondary2;
+      }
+
+      label.active {
+        color: $secondary2;
+      }
+    }
+
+    &.grey {
+      fieldset.active:after {
+        border-bottom: 2px solid $grey3;
+      }
+
+      label.active {
+        color: $grey3;
+      }
+    }
+
+    fieldset.active {
+      border-width: 2px;
+    }
+
+    &.error fieldset:after {
+      border-bottom: 2px solid $error !important;
+    }
+
+    &.error label {
+      color: $error !important;
+    }
+  }
+
+  &.outlined {
+    &.sm {
+      height: 32px;
+    }
+
+    &.md {
+      height: 38px;
+    }
+
+    &.lg {
+      height: 46px;
+    }
+
+    input {
+      padding: 0 14px;
+      -webkit-tap-highlight-color: transparent;
+      margin-top: -5px;
+      height: calc(100% - 6px);
+      border-radius: 4px;
+
+      &.email {
+        text-transform: none;
+      }
+
+      &:focus {
+        height: calc(100% - 5px);
+        padding-top: 1px;
+        padding-left: 13px;
+      }
+    }
+
+    fieldset {
+      border: 1px solid $grey3;
+      border-radius: 4px;
+    }
+
+    legend {
+      margin-left: 7px;
+      padding: 0 7px;
+
+      &.active {
+        margin-left: 6px;
+      }
+    }
+
+    &.primary {
+      label.active {
+        color: $main2;
+      }
+
+      fieldset.active {
+        border: 2px solid $primary2;
+      }
+    }
+
+    &.secondary {
+      label.active {
+        color: $secondary2;
+      }
+
+      fieldset.active {
+        border: 2px solid $secondary2;
+      }
+    }
+
+    &.grey {
+      label.active {
+        color: $grey3;
+      }
+
+      fieldset.active {
+        border: 2px solid $grey3;
+      }
+    }
+
+    &.error fieldset {
+      border: 2px solid $error !important;
+    }
+
+    &.error label {
+      color: $error !important;
+    }
+  }
+
+  &.filled {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    input {
+      line-height: 1;
+      height: 100%;
+      margin-top: -12px;
+      padding-top: 10px;
+      padding-left: 5px;
+    }
+
+    &.sm {
+      height: 32px;
+      //padding-top: 5px;
+    }
+
+    &.md {
+      height: 38px;
+      //padding-top: 10px;
+    }
+
+    &.lg {
+      height: 46px;
+      //padding-top: 15px;
+    }
+
+    legend {
+      margin-left: 5px;
+    }
+
+    &.primary:hover input {
+      border-color: $primary2;
+    }
+
+    &.secondary:hover {
+      border-color: $secondary2;
+    }
+
+    fieldset {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-bottom: 1px solid $grey3;
+      }
+    }
+
+    &.primary {
+      background: lighten($primary2, 50%);
+
+      fieldset.active:after {
+        border-bottom: 2px solid $primary2;
+      }
+
+      label.active {
+        color: $primary2;
+      }
+    }
+
+    &.secondary {
+      background: lighten($secondary2, 20%);
+
+      fieldset.active:after {
+        border-bottom: 2px solid $secondary2;
+      }
+
+      label.active {
+        color: $secondary3;
+      }
+    }
+
+    &.grey {
+      background: lighten($grey3, 30%);
+
+      fieldset.active:after {
+        border-bottom: 2px solid $grey3;
+      }
+
+      label.active {
+        color: $grey3;
+      }
+    }
+
+    fieldset.active {
+      border-width: 2px;
+    }
+
+    &.error fieldset:after {
+      border-bottom: 2px solid $error !important;
+    }
+
+    &.error label {
+      color: $error !important;
+    }
+  }
+}

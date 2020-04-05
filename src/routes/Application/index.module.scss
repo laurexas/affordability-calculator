@@ -1,0 +1,53 @@
+@import "../../styles/utils/vars";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  height: 90vh;
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.3);
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .title {
+      padding: 25px 0;
+    }
+  }
+}
+
+.break {
+  width: 80%;
+  text-align: center;
+  position: relative;
+  color: $primary1;
+  margin: 10px auto;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 7px;
+    width: 45%;
+    height: 1px;
+    background: $primary1;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+    width: 45%;
+    height: 1px;
+    background: $primary1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 100vw;
+  }
+}

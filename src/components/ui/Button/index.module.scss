@@ -1,0 +1,214 @@
+@import "../../../styles/utils/vars";
+
+.button {
+  box-sizing: border-box;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  user-select: none;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s;
+  vertical-align: bottom;
+  &.sm {
+    height: 28px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &.md {
+    height: 32px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &.lg {
+    height: 42px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  &.contained {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+  &.contained.primary {
+    color: #fff;
+    background: $main2;
+    .backdrop {
+      background: $main2;
+    }
+    &:hover {
+      background: $primary3;
+    }
+  }
+  &.contained.secondary {
+    color: #fff;
+    background: $secondary2;
+    .backdrop {
+      background: $secondary2;
+    }
+    &:hover {
+      background: $secondary3;
+    }
+  }
+  &.text.primary {
+    transition: 0.15s;
+    color: $primary2;
+    background: transparent;
+    &:first-letter {
+      text-transform: uppercase;
+    }
+    .backdrop {
+      background: lighten($primary2, 45%);
+    }
+    &:hover {
+      background: lighten($primary2, 45%);
+    }
+  }
+  &.text.secondary {
+    transition: 0.15s;
+    color: $secondary2;
+    background: transparent;
+    &:first-letter {
+      text-transform: uppercase;
+    }
+    .backdrop {
+      background: lighten($secondary2, 32%);
+    }
+    &:hover {
+      background: lighten($secondary2, 32%);
+      color: $secondary3;
+    }
+    .spinner {
+      border-top: 2px solid $secondary2;
+      border-bottom: 2px solid $secondary2;
+    }
+  }
+  &.outlined.primary {
+    transition: 0.8s;
+    color: $primary2;
+    border: 1px solid $primary2;
+    &:first-letter {
+      text-transform: uppercase;
+    }
+    .backdrop {
+      background: lighten($primary1, 30%);
+    }
+    &:hover {
+      color: white;
+      z-index: 2;
+    }
+  }
+  &.outlined.secondary {
+    transition: 0.15s;
+    color: $secondary2;
+    border: 1px solid $secondary2;
+    &:first-letter {
+      text-transform: uppercase;
+    }
+    .backdrop {
+      background: lighten($secondary2, 32%);
+    }
+    &:hover {
+      background: lighten($secondary2, 32%);
+      color: $secondary3;
+    }
+    .spinner {
+      border-top: 2px solid $primary2;
+      border-bottom: 2px solid $primary2;
+    }
+  }
+}
+
+.spinner {
+  z-index: 2;
+  position: absolute;
+  display: inline-block;
+  margin: auto;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 50%;
+  animation-name: spinner;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: 16px;
+  height: 16px;
+  line-height: 26px;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-top: 2px solid $primary2;
+  border-bottom: 2px solid $primary2;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: $main2;
+  z-index: -1;
+  transition: 0.8s;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.button:hover::before {
+  height: 180%;
+}
+.button:hover {
+  color: #fff;
+  z-index: 333;
+}
+
+.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #fff;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  user-select: none;
+  text-align: center;
+  outline: none;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 5px;
+  vertical-align: bottom;
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+@keyframes spinner {
+  0% {
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

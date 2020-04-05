@@ -1,0 +1,41 @@
+@import "../../../styles/utils/vars";
+
+.table {
+  width: 90%;
+  height: 70%;
+  margin: 10px auto;
+  .row {
+    display: flex;
+    height: 10%;
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid $grey1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    background: $main6;
+    .tableHead {
+      width: 30%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .icon {
+        height: 20px;
+        width: 20px;
+      }
+      span {
+        color: $primary2;
+        margin: 0 5px;
+      }
+    }
+    .tableData {
+      width: 70%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        color: $primary2;
+      }
+    }
+  }
+}
