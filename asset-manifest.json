@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/affordability-calculator/static/css/main.9148f93c.chunk.css",
+    "main.js": "/affordability-calculator/static/js/main.fffc340e.chunk.js",
+    "main.js.map": "/affordability-calculator/static/js/main.fffc340e.chunk.js.map",
+    "runtime-main.js": "/affordability-calculator/static/js/runtime-main.f0fa218b.js",
+    "runtime-main.js.map": "/affordability-calculator/static/js/runtime-main.f0fa218b.js.map",
+    "static/js/2.570e3a7c.chunk.js": "/affordability-calculator/static/js/2.570e3a7c.chunk.js",
+    "static/js/2.570e3a7c.chunk.js.map": "/affordability-calculator/static/js/2.570e3a7c.chunk.js.map",
+    "index.html": "/affordability-calculator/index.html",
+    "precache-manifest.81dd47c4a7e0f04857a6af53fbd003ae.js": "/affordability-calculator/precache-manifest.81dd47c4a7e0f04857a6af53fbd003ae.js",
+    "service-worker.js": "/affordability-calculator/service-worker.js",
+    "static/css/main.9148f93c.chunk.css.map": "/affordability-calculator/static/css/main.9148f93c.chunk.css.map",
+    "static/js/2.570e3a7c.chunk.js.LICENSE.txt": "/affordability-calculator/static/js/2.570e3a7c.chunk.js.LICENSE.txt",
+    "static/media/spritesheet.svg": "/affordability-calculator/static/media/spritesheet.9783f206.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f0fa218b.js",
+    "static/js/2.570e3a7c.chunk.js",
+    "static/css/main.9148f93c.chunk.css",
+    "static/js/main.fffc340e.chunk.js"
+  ]
+}
