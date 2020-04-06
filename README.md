@@ -1,3 +1,5 @@
+You can check app demo version here : https://laurexas.github.io/affordability-calculator/
+
 This application was created using React, React Hooks API, Redux and SASS prepocessor for styling.
 
 # About 
@@ -20,7 +22,7 @@ Git clone project or simply download project
 
 When project is downloaded run `npm install` command in your working directory
 
-### `npm start`
+### npm start
 After all dependencies are installed run `npm start` command.
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
